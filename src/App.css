@@ -1,38 +1,126 @@
-.App {
+body{
+  --tw-bg-opacity: 1;
+  background-color: rgb(35 39 47/var(--tw-bg-opacity));
+}
+
+
+.footer{
+  color: aliceblue;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.card{
+  color:rgba(239, 233, 238, 1);
+  background-color:rgb(98, 106, 113);
+}
+.card-link{
+  color:rgb(5, 91, 239) !important;
+  font-size:1.1rem;
+
+}
+.container{
+  text-align: center;
+  color: aliceblue;
+  background: rgb(100, 96, 96);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+.loader{
+  height:70vh;
+  width:100vw;
+  display:flex;
+  align-items:center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.navbar{
+  padding:1% 8%!important;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.navbar-nav{
+ padding:2px 5px;
+}
+
+.footer{
+  padding:7% 10%;
+}
+
+.social-icon{
+  margin:10px 10px;
+  font-size:1.5rem;
+}
+
+.jumbotron{
+  color:rgba(239, 233, 238, 1);
+  background-color:rgb(98, 106, 113);
+  width: 95vw !important;
+  margin: 0px auto;
+  height: 100vh !important;
+}
+
+.scroll-bar{
+  width: 100%;
+  margin:10px 0px;
+  padding:10px;
+  color:rgba(239, 233, 238, 1);
+  background-color:rgb(98, 106, 113);
+  display: flex;
+  justify-content: center;
+  border-radius:20px;
+  overflow:auto;
+}
+
+.platform{
+  margin: 0px 20px;
+  cursor: pointer;
+  text-align: center;
+  border-radius:10%;
+}
+.platform-active{
+  margin: 0px 20px;
+  cursor: pointer;
+  color: rgb(243, 212, 173);
+  text-align: center;
+  border-radius:10%;
+}
+
+
+
+@media screen and (min-device-width:300px) {
+
+  .row{
+    display: grid;
+    grid-template-columns:1fr;
+    padding:10px;
+    gap: 15px;
   }
-  to {
-    transform: rotate(360deg);
+  .card{
+     text-align:center;
+
+  }
+}
+@media screen and (min-device-width: 481px) and (max-device-width: 768px) { 
+  .row{
+    display: grid;
+    grid-template-columns:1fr 1fr;
+    padding:10px;
+    gap: 15px;
+  }
+}
+
+@media screen and (min-device-width: 768px) and (max-device-width: 1440px) { 
+  .row{
+    display: grid;
+    grid-template-columns:1fr 1fr 1fr;
+    padding:10px;
+    gap: 15px;
+  }
+}
+
+@media screen and (min-device-width: 1440px) { 
+  .row{
+    display: grid;
+    grid-template-columns:1fr 1fr 1fr 1fr;
+    padding:10px;
+    gap: 15px;
   }
 }
