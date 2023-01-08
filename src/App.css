@@ -13,11 +13,6 @@ body{
   color:rgba(239, 233, 238, 1);
   background-color:rgb(98, 106, 113);
 }
-.card-link{
-  color:rgb(5, 91, 239) !important;
-  font-size:1.1rem;
-
-}
 .container{
   text-align: center;
   color: aliceblue;

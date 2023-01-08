@@ -13,8 +13,8 @@ const renderContests = (contests) => {
           <h5 className="card-title">{contest.name}</h5>
           <div>Starts at : {startingTime}</div>
           <div>Ends on : {endingTime}</div>
-          <div>Platform : {contest.site}</div>
-          <a href={contest.url} rel="noreferrer" className="m-2 card-link">Go to contest</a>
+         {contest.site && <div>Platform : {contest.site}</div>}
+          <a href={contest.url} rel="noreferrer" className="btn btn-primary m-2 card-link">Go to contest</a>
         </div>
       </div>
     )
