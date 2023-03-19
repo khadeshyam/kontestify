@@ -2,7 +2,7 @@ import React from 'react'
 
 function Scrollbar({handlePlatformClick}) {
   return (
-    <div className="scroll-bar">
+    <div className="scroll-bar sticky-top">
         <div onClick={()=>handlePlatformClick("all")} className="platform">All</div>
         <div onClick={()=>handlePlatformClick("hacker_rank")} className="platform">HackerRank</div>
         <div onClick={()=>handlePlatformClick("code_chef")} className="platform">Codechef</div>
