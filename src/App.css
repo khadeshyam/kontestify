@@ -29,6 +29,7 @@ body{
 
 .navbar{
   padding:1% 8%!important;
+  background-color:#1d1d1f;
 }
 
 .navbar-nav{
@@ -48,8 +49,8 @@ body{
   color:rgba(239, 233, 238, 1);
   background-color:rgb(98, 106, 113);
   width: 95vw !important;
-  margin: 0px auto;
-  height: 100vh !important;
+  margin: 5vh auto;
+  height: 70vh !important;
 }
 
 .scroll-bar{
@@ -57,11 +58,12 @@ body{
   margin:10px 0px;
   padding:10px;
   color:rgba(239, 233, 238, 1);
-  background-color:rgb(98, 106, 113);
+  background-color:#363636;
   display: flex;
   justify-content: center;
   border-radius:20px;
   overflow:auto;
+  
 }
 
 .platform{
@@ -85,9 +87,6 @@ body{
     font-size:0.8rem;
     color:rgba(239, 233, 238, 1);
     background-color:rgb(98, 106, 113);
-    width: 95vw !important;
-    margin: 0px auto;
-    height: 150vh !important;
   }
   
 
@@ -128,3 +127,5 @@ body{
     gap: 15px;
   }
 }
+
+/*scrap data using selenium-js*/
