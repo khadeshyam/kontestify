@@ -14,7 +14,7 @@ const renderContests = (contests) => {
           <div>Starts at : {startingTime}</div>
           <div>Ends on : {endingTime}</div>
          {contest.site && <div>Platform : {contest.site}</div>}
-          <a href={contest.url} rel="noreferrer" className="btn btn-primary m-2 card-link">Go to contest</a>
+          <a href={contest.url} rel="noreferrer" className="btn btn-primary m-2 card-link" target="_blank">Go to contest</a>
         </div>
       </div>
     )
