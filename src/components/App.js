@@ -8,7 +8,7 @@ import Home from "./Home";
 
 
 function App() {
-  const [contests, setContests] = useState([]);
+  const [contests, setContests] = useState(null);
   const [loading, setLoading] = useState(true);
 
   async function fetchContest(){
@@ -25,7 +25,9 @@ function App() {
   }
 
   useEffect(() => {
-    fetchContest();
+    if(!contests){
+      fetchContest();
+    }
   },[]);
 
   async function handlePlatformClick(platform) {
