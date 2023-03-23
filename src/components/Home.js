@@ -1,4 +1,5 @@
-import React from 'react'
+import React from 'react';
+import { Link } from "react-router-dom";
 
 function Home() {
   return (
@@ -13,9 +14,9 @@ function Home() {
       So what are you waiting for Register for upcoming contests Now
     </p>
     <p className="lead">
-      <a className="btn btn-primary btn-lg" href="/contests" role="button">
+      <Link className="btn btn-primary btn-lg" to="/contests" role="button">
         Register
-      </a>
+      </Link>
     </p>
   </div>
   
