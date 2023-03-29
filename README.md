@@ -1,6 +1,6 @@
-# <a href="https://kontestify.onrender.com" target="_blank">Kontestify</a> 
+#<a href="https://kontestify.onrender.com" target="_blank">Kontestify</a> 
 
- A web application that fetches coding contests.
+A web application that fetches coding contests.
 
 ## Prerequisites
 
@@ -25,7 +25,7 @@ To run Kontestify locally, you need to have the following installed:
 - filter coding contests based on various platforms
 - Provides links to the official websites or platforms hosting the coding contests
 
-  ## Technologies Used
+## Technologies Used
 
 - React
 - React Load Spinner (npm package)
