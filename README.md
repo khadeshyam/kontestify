@@ -1,4 +1,4 @@
-# <a href="https://kontestify.onrender.com" target="_blank">Kontestify</a> 
+# <a href="https://pink-comfortable-snapper.cyclic.app/" target="_blank">Kontestify</a> 
 
 A web application that fetches coding contests.
 
