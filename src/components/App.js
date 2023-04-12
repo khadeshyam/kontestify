@@ -1,17 +1,16 @@
-import '../App.css';
+import "../App.css";
 import { useState, useEffect } from "react";
-import Contests from './Contests';
-import Navbar from './Navbar';
+import Contests from "./Contests";
+import Navbar from "./Navbar";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import About from './About';
+import About from "./About";
 import Home from "./Home";
-
 
 function App() {
   const [contests, setContests] = useState(null);
   const [loading, setLoading] = useState(true);
 
-  async function fetchContest(){
+  async function fetchContest() {
     try {
       let url = "https://kontests.net/api/v1/all";
       const res = await fetch(url);
@@ -25,10 +24,11 @@ function App() {
   }
 
   useEffect(() => {
-    if(!contests){
+    if (!contests) {
       fetchContest();
     }
-  },[]);
+    // eslint-disable-next-line
+  }, []);
 
   async function handlePlatformClick(platform) {
     setLoading(true);
@@ -40,16 +40,23 @@ function App() {
     setLoading(false);
   }
 
-
   return (
     <div className="app">
       <BrowserRouter>
         <Navbar />
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/contests" element={<Contests contests={contests} loading={loading} handlePlatformClick={handlePlatformClick}/>} />
-          <Route path="/about" element={<About />} >
-          </Route>
+          <Route
+            path="/contests"
+            element={
+              <Contests
+                contests={contests}
+                loading={loading}
+                handlePlatformClick={handlePlatformClick}
+              />
+            }
+          />
+          <Route path="/about" element={<About />}></Route>
         </Routes>
       </BrowserRouter>
     </div>
