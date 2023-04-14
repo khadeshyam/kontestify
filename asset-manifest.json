@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/static/css/main.3c70b2da.css",
-    "main.js": "/static/js/main.ad20c71f.js",
-    "index.html": "/index.html",
-    "main.3c70b2da.css.map": "/static/css/main.3c70b2da.css.map",
-    "main.ad20c71f.js.map": "/static/js/main.ad20c71f.js.map"
+    "main.css": "//kontestify/static/css/main.3c70b2da.css",
+    "main.js": "//kontestify/static/js/main.2261da37.js",
+    "index.html": "//kontestify/index.html",
+    "main.3c70b2da.css.map": "//kontestify/static/css/main.3c70b2da.css.map",
+    "main.2261da37.js.map": "//kontestify/static/js/main.2261da37.js.map"
   },
   "entrypoints": [
     "static/css/main.3c70b2da.css",
-    "static/js/main.ad20c71f.js"
+    "static/js/main.2261da37.js"
   ]
 }
