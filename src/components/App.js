@@ -2,7 +2,7 @@ import "../App.css";
 import { useState, useEffect } from "react";
 import Contests from "./Contests";
 import Navbar from "./Navbar";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 import About from "./About";
 import Home from "./Home";
 
