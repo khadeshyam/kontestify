@@ -20,7 +20,10 @@ jobs:
           npm ci
           npm run build
 
-      - name: Deploy 🚀
-        uses: JamesIves/github-pages-deploy-action@v4
+      - name: Deploy 🚀 to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
         with:
-          folder: build # The folder the action should deploy.
+          publish_dir: ./build
+          cname: myreactapp.com
+          commit_message: Deploy to GitHub Pages
+          publish_branch: gh-pages
