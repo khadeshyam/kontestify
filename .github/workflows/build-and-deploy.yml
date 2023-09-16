@@ -53,6 +53,7 @@ jobs:
         - name: Login to GitHub with PAT
           run: |
             echo $GH_TOKEN | gh auth login --with-token
+            unset GH_TOKEN
 
         - name: Clone Private Repository
           run: |
