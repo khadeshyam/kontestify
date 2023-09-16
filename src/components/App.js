@@ -31,33 +31,37 @@ function App() {
   }, []);
 
   async function handlePlatformClick(platform) {
-    setLoading(true);
-    let url = `https://kontests.net/api/v1/${platform}`;
-    const res = await fetch(url);
-    const result = await res.json();
-    console.log(result);
-    setContests(result);
-    setLoading(false);
+    try {
+      setLoading(true);
+      let url = `https://kontests.net/api/v1/${platform}`;
+      const res = await fetch(url);
+      const result = await res.json();
+      console.log(result);
+      setContests(result);
+      setLoading(false);
+    } catch (err) {
+      console.log(err);
+    }
   }
 
   return (
     <div className="app">
 
-        <Navbar />
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route
-            path="/contests"
-            element={
-              <Contests
-                contests={contests}
-                loading={loading}
-                handlePlatformClick={handlePlatformClick}
-              />
-            }
-          />
-          <Route path="/about" element={<About />}></Route>
-        </Routes>
+      <Navbar />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route
+          path="/contests"
+          element={
+            <Contests
+              contests={contests}
+              loading={loading}
+              handlePlatformClick={handlePlatformClick}
+            />
+          }
+        />
+        <Route path="/about" element={<About />}></Route>
+      </Routes>
     </div>
   );
 }
