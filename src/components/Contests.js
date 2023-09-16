@@ -22,7 +22,7 @@ const renderContests = (contests) => {
   return cardsOfContest;
 } 
 
-function Contests({contests,loading,handlePlatformClick,platform}) {
+function Contests({contests,loading,handlePlatformClick}) {
   return (
     <div>
     <Scrollbar handlePlatformClick={handlePlatformClick} />
