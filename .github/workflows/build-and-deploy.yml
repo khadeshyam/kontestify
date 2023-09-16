@@ -50,6 +50,10 @@ jobs:
           with:
             name: react-build
 
+        - name: Login to GitHub with PAT
+          run: |
+            echo $GH_TOKEN | gh auth login --with-token
+
         - name: Clone Private Repository
           run: |
             git clone $PRIVATE_REPO_URL private-repo
