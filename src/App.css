@@ -30,6 +30,7 @@ body{
 .navbar{
   padding:1% 8%!important;
   background-color:#1d1d1f;
+  backdrop-filter: blur(2px);
 }
 
 .navbar-nav{

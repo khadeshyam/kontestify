@@ -1,6 +1,6 @@
 import React from 'react';
-import Scrollbar from './Scrollbar';
-import Loader from './Loader';
+import Scrollbar from '../components/Scrollbar';
+import Loader from '../components/Loader';
 
   
 const renderContests = (contests) => {

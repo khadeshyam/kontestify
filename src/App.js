@@ -1,10 +1,10 @@
 import "../App.css";
 import { useState, useEffect } from "react";
-import Contests from "./Contests";
-import Navbar from "./Navbar";
+import Contests from "./pages/Contests";
+import Navbar from "./components/Navbar";
 import { Routes, Route } from "react-router-dom";
-import About from "./About";
-import Home from "./Home";
+import About from "./pages/About";
+import Home from "./pages/Home";
 
 function App() {
   const [contests, setContests] = useState(null);
