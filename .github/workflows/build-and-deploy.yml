@@ -7,7 +7,7 @@ on:
   workflow_dispatch:
 
 env:
-  GH_TOKEN: ${{ secrets.GH_TOKEN }}
+  PAT: ${{ secrets.PAT }}
   PRIVATE_REPO_URL: ${{ secrets.PRIVATE_REPO_URL }}
 
 jobs:
@@ -50,14 +50,25 @@ jobs:
           with:
             name: react-build
 
-        - name: Login to GitHub with PAT
-          run: |
-            echo $GH_TOKEN | gh auth login --with-token
-            unset GH_TOKEN
-
         - name: Clone Private Repository
+          uses: actions/checkout@v4
+          with:
+            repository: $PRIVATE_REPO_URL
+            token: $PAT
+            path: private-repo
+
+        - name: Configure Git
           run: |
-            git clone $PRIVATE_REPO_URL private-repo
+            pwd
+            ls -la
+            echo $PAT
+            echo $PRIVATE_REPO_URL
+            git config --global user.name 'GitHub Actions'
+            git config --global user.email 'actions@github.com'
+        
+        - name: Remove Old Build Folder in Private Repository
+          run: |
+            rm -rf private-repo/build
           if: success()
 
         - name: Create Build Folder in Private Repository
@@ -69,9 +80,6 @@ jobs:
         - name: Commit and Push to Private Repository
           run: |
             cd private-repo
-            git config user.email "actions@github.com"
-            git config user.name "GitHub Actions"
             git add .
             git commit -m "Update React build"
             git push origin master # Use "master" as the branch name
-          if: success()
