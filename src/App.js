@@ -1,4 +1,4 @@
-import "../App.css";
+import "./App.css";
 import { useState, useEffect } from "react";
 import Contests from "./pages/Contests";
 import Navbar from "./components/Navbar";
