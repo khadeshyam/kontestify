@@ -49,6 +49,7 @@ jobs:
           uses: actions/download-artifact@v3
           with:
             name: react-build
+            path: react-build
         
         - name: Configure Git
           run: |
