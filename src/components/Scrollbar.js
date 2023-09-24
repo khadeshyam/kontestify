@@ -13,12 +13,12 @@ function Scrollbar({ handlePlatformClick }) {
   // Define styles for the active and inactive platforms
   const platformStyle = (platform) => ({
     cursor: 'pointer',
-    padding: '10px',
+    padding: '4px',
     backgroundColor: platform === activePlatform ? '#007bff' : 'transparent',
-    color: platform === activePlatform ? '#fff' : '#333',
-    borderRadius: '4px',
-    margin: '5px',
-    transition: 'background-color 0.3s ease',
+    color: platform === activePlatform ? '#333' : '#fff',
+    borderRadius: '16px',
+    margin: '2px 12px',
+    transition: 'background-color 0.1s ease 0.1s, color 0.1s ease 0.1s',
   });
 
   return (

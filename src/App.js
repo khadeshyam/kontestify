@@ -15,7 +15,7 @@ function App() {
       let url = "https://kontests.net/api/v1/all";
       const res = await fetch(url);
       const result = await res.json();
-      console.log(result);
+      // console.log(result);
       setLoading(false);
       setContests(result);
     } catch (err) {
@@ -36,7 +36,7 @@ function App() {
       let url = `https://kontests.net/api/v1/${platform}`;
       const res = await fetch(url);
       const result = await res.json();
-      console.log(result);
+      // console.log(result);
       setContests(result);
       setLoading(false);
     } catch (err) {
