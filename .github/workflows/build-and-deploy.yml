@@ -62,8 +62,8 @@ jobs:
         - name: Clone Private Repository
           uses: actions/checkout@v4
           with:
-            repository: $PRIVATE_REPO_URL
-            token: $PAT
+            repository: ${{ env.PRIVATE_REPO_URL }}
+            token: ${{ env.PAT }}
             path: private-repo
         
         - name: Remove Old Build Folder in Private Repository
