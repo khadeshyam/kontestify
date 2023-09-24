@@ -49,14 +49,7 @@ jobs:
           uses: actions/download-artifact@v3
           with:
             name: react-build
-
-        - name: Clone Private Repository
-          uses: actions/checkout@v4
-          with:
-            repository: $PRIVATE_REPO_URL
-            token: $PAT
-            path: private-repo
-
+        
         - name: Configure Git
           run: |
             pwd
@@ -65,6 +58,13 @@ jobs:
             echo $PRIVATE_REPO_URL
             git config --global user.name 'GitHub Actions'
             git config --global user.email 'actions@github.com'
+
+        - name: Clone Private Repository
+          uses: actions/checkout@v4
+          with:
+            repository: $PRIVATE_REPO_URL
+            token: $PAT
+            path: private-repo
         
         - name: Remove Old Build Folder in Private Repository
           run: |
