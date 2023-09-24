@@ -16,7 +16,7 @@ To run Kontestify locally, you need to have the following installed:
 3. Run `npm start` to start the application.
 
 ## 🐳 Run using Docker
-1. Pull the official docker image of this project from [my Docker Hub profile](https://hub.docker.com/u/shyam2056):
+1. Pull the official docker image of this project from [my Docker Hub profile](https://hub.docker.com/u/shyam2056)
 2. Run the following command on terminal ```docker pull shyam2056/contest-app ```
 
 ## ⭐ Features
